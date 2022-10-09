@@ -25,7 +25,6 @@ go build ./...
       1. Each frame is same number of lines
       2. Frames are played in order found in the file
 
-
 ```bash
 
 
