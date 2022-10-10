@@ -33,7 +33,7 @@ func main() {
 	totalFrames := (totalLines - 1) / linesPerFrame
 	for f := int64(0); f < totalFrames; f++ {
 		for fh := (f * linesPerFrame) + s; fh < (f*linesPerFrame+s)+linesPerFrame; fh++ {
-			fmt.Fprintf(os.Stdout, "%s\n", strings.ReplaceAll(lines[fh], "\\x1b", "\x1b"))
+			fmt.Fprintf(os.Stdout, "%s\n", strings.ReplaceAll(strings.ReplaceAll(lines[fh], "\\x1b[", "\x1b["), "\\033[", "\033["))
 		}
 		time.Sleep(time.Duration(frameDuration) * time.Millisecond)
 		if f+1 < totalFrames {
