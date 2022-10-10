@@ -47,3 +47,11 @@ go build ./...
                 \ | /             [=    =]     | /
 ---Vv---vv---VvvV\|/vvv---------------------------------------------------
 ```
+
+## Silly Ideas ##
+
+* `asciimator` works with `lolcat`, but results vary.  May cause seisures.
+
+  ```bash
+   asciimator ./unicorn.txt | lolcat
+   ```
